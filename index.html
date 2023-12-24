@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas</title>
+    <style>
+        body {
+            background: url('img/snow.gif');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/snow.gif');
+            background-size: 100%;
+            background-attachment: fixed;
+        }
+    </style>
+   
+</head>
+<body>
+    <audio id="myAudio" controls autoplay loop hidden>
+        <source src="music.mp3" type="audio/mp3">
+        this
+    </audio>
+    <script>
+        navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+        
+        var x = document.getElementById("myAudio"); 
+        x.play();
+     
+         // stop microphone stream acquired by getUserMedia
+         stream.getTracks().forEach(function (track) { track.stop(); });
+     });
+    </script>
+
+    <marquee direction="left" behavior="" direction="">
+        <img src="img/santa.gif" alt="">
+    </marquee>
+    
+</body>
+
+</html>
